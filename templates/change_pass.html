@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change Password</title>
+    <script src="../static/validation.js"></script>
+  </head>
+  <body>
+    <h1>CHANGE YOUR PASSWORD</h1>
+    <p>falana dhamkana</p>
+    <form name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm('change_pass')">
+      <label for="myfile">Select a file:</label>
+      <input name="filename" type="file" id="myfile" name="myfile" required><br><br>
+      <label for="password">Enter the current Password: </label>
+      <input name="password" type="password" required><br><br>
+      <label for="new_password">Enter new Password: </label>
+      <input name="new_password" type="password" required><br><br>
+      <label for="cpassword">Re-Enter new Password: </label>
+      <input name="cpassword" type="password" required><br><br>
+      <input type="submit" value="Change">
+    </form>
+  </body>
+</html>

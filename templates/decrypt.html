@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Decrypter</title>
+    <script src="..\static\validation.js"></script>
+  </head>
+  <body>
+    <h1>PDF DECRYPTION</h1>
+    <p>falana dhamkana</p>
+    <form name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm()">
+      <label for="myfile">Select a PDF file:</label>
+      <input name="filename" type="file" id="myfile" name="myfile" required><br><br>
+      <label for="password">Enter the Password: </label>
+      <input name="password" type="password" required><br><br>
+      <input type="submit" value="Decrypt">
+    </form>
+
+  </body>
+</html>
