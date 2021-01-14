@@ -1,7 +1,33 @@
-
-body{
-  background-color: ligh
+body {
+  background-image: url("../static/background.jpg");
 }
-p{
-  background-image: image("pagebg.jpg");
+img {
+  position: absolute;
+  height: 350px;
+  width: 300px;
+  right: 100px;
+}
+h1 {
+  color: maroon;
+  font-family: Georgia,serif;
+  font-size: 40px;
+}
+p {
+  color: white;
+  font-size: 18px;
+}
+ul {
+  color: white;
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: grey;
+}
+a:hover {
+  color: lightgrey;
+}
+a:active {
+  color: grey;
 }

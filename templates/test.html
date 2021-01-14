@@ -4,12 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Encrypter and Merger</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style1.css')}}"-->
     <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
-    <link rel="stylesheet" type="text/css" href="style1.css">
+    <style>
+    body {
+      background-image: url("../static/bgimage.jpg");
+      background-attachment: fixed;
+    }
+    img {
+      position: fixed;
+      height: 350px;
+      width: 300px;
+      right: 120px;
+      top: 100px;
+    }
+    h1 {
+      color: maroon;
+      font-family: Georgia,serif;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+    }
+    ul {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    a {
+      color: black;
+      font-weight: bold;
+    }
+    a:hover {
+      color: darkgrey;
+      font-weight: bold;
+    }
+  </style>
   </head>
   <body>
     <p><h1>PDF ENCRYPTER AND MERGER</h1></p>
-    <p>falana dhamkana <p>
+    <p>This  <p>
+    <img src="../static/logo.png" alt="PDF logo">
     <p>Please choose one of the options below:</p>
     <ul>
       <li><a href = "encrypt">Encrypt your PDF file</a></li>
