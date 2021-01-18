@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Encrypter and Merger</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style1.css')}}"-->
     <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
     <style>
     body {
@@ -12,7 +11,7 @@
       background-attachment: fixed;
     }
     img {
-      position: fixed;
+      position: absolute;
       height: 350px;
       width: 300px;
       right: 120px;
@@ -41,11 +40,16 @@
       color: darkgrey;
       font-weight: bold;
     }
+    hr {
+      border-top: 5px solid black;
+    }
   </style>
   </head>
   <body>
-    <p><h1>PDF ENCRYPTER AND MERGER</h1></p>
-    <p>This  <p>
+    <h1>PDF ENCRYPTER AND MERGER</h1>
+    <hr>
+    <p>The PDF Encrypter and Merger allows you to encrypt, decryt and even merge of PDF files. <br>
+    Moreover, you can even the password of your already encrypted file.<br>It creates a copy of your PDF file keeping the original file unedited so that you can have the option whether you want to keep the original file or not.</p>
     <img src="../static/logo.png" alt="PDF logo">
     <p>Please choose one of the options below:</p>
     <ul>

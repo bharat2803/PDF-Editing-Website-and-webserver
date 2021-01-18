@@ -3,9 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>downloaded</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
+    <style>
+    body {
+      background-image: url("../static/bgimage.jpg");
+      background-attachment: fixed;
+    }
+    img {
+      position: absolute;
+      height: 350px;
+      width: 300px;
+      right: 120px;
+      top: 100px;
+    }
+    h1 {
+      color: maroon;
+      font-family: Georgia,serif;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+    }
+    ul {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    a {
+      color: black;
+      font-weight: bold;
+    }
+    a:hover {
+      color: darkgrey;
+      font-weight: bold;
+    }
+  </style>
   </head>
   <body>
   <h1>{{operation}}</h1>
+  <img src="../static/logo.png" alt="PDF logo">
   <a href="/download/{{PDFfile}}">Click her to download. </a>
   </body>
 </html>

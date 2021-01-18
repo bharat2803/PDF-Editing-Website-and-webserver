@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Encrypter</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style1.css')}}">
     <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
     <script src="..\static\validation.js"></script>
     <style>
@@ -13,7 +12,7 @@
       background-attachment: fixed;
     }
     img {
-      position: fixed;
+      position: absolute;
       height: 350px;
       width: 300px;
       right: 120px;
@@ -42,16 +41,12 @@
       color: darkgrey;
       font-weight: bold;
     }
-    label {
-      color: black;
-      font-size: 18px;
-    }
   </style>
   </head>
   <body>
     <h1>PDF ENCRYPTION</h1>
     <img src="../static/logo.png" alt="PDF logo">
-    <p>falana dhamkana</p>
+    <p>To encrypt your PDF file, kindly enter the details below and click on "Encrypt":</p>
     <form name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm('encrypt')">
       <label for="myfile">Select a file:</label>
       <input name="filename" type="file" id="myfile" name="myfile" required><br><br>

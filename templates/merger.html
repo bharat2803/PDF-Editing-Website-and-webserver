@@ -4,10 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Merger</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
+    <style>
+    body {
+      background-image: url("../static/bgimage.jpg");
+      background-attachment: fixed;
+    }
+    img {
+      position: absolute;
+      height: 350px;
+      width: 300px;
+      right: 120px;
+      top: 100px;
+    }
+    h1 {
+      color: maroon;
+      font-family: Georgia,serif;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+    }
+    ul {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    a {
+      color: black;
+      font-weight: bold;
+    }
+    a:hover {
+      color: darkgrey;
+      font-weight: bold;
+    }
+  </style>
   </head>
   <body>
     <h1>PDF Merger</h1>
-    <p>falana dhamkana3</p>
+    <p>To merge your PDF files, kindly enter the details below and click on "Merge":</p>
+    <img src="../static/logo.png" alt="PDF logo">
     <form name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm('encrypt')">
       <label for="filenames">Select files:</label>
       <input type="file" id="myfile" name="filenames" multiple><br><br>

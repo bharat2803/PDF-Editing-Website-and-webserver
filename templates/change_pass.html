@@ -3,11 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Change Password</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
     <script src="../static/validation.js"></script>
+    <style>
+    body {
+      background-image: url("../static/bgimage.jpg");
+      background-attachment: fixed;
+    }
+    img {
+      position: absolute;
+      height: 350px;
+      width: 300px;
+      right: 120px;
+      top: 100px;
+    }
+    h1 {
+      color: maroon;
+      font-family: Georgia,serif;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+    }
+    ul {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    a {
+      color: black;
+      font-weight: bold;
+    }
+    a:hover {
+      color: darkgrey;
+      font-weight: bold;
+    }
+  </style>
   </head>
   <body>
     <h1>CHANGE YOUR PASSWORD</h1>
-    <p>falana dhamkana</p>
+    <p>To change your password, kindly fill the details below and click on "Change":</p>
+    <img src="../static/logo.png" alt="PDF logo">
     <form name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm('change_pass')">
       <label for="myfile">Select a file:</label>
       <input name="filename" type="file" id="myfile" name="myfile" required><br><br>
