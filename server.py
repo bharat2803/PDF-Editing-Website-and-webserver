@@ -91,6 +91,6 @@ app.config["DOWNLOAD_FOLDER"] = "uploads"
 def get_pdf(PDFfile):
 
     try:
-        return send_from_directory(app.config["DOWNLOAD_FOLDER"], filename=PDFfile, as_attachment=True)
+        return send_from_directory(app.config["DOWNLOAD_FOLDER"], PDFfile, as_attachment=True)
     except FileNotFoundError:
         abort(404)

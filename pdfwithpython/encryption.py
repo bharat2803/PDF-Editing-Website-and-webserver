@@ -14,7 +14,7 @@ def encryptPDF(filepath,password):
             with open(head+"\\clone.pdf", mode='wb') as file:
                 writer.write(file)
     os.rename(head+"\\clone.pdf",head+"\\"+tail.rsplit('.',1)[0]+"_encrypted.pdf")
-    print(head+"\\"+tail.rsplit('.',1)[0]+"_encrypted.pdf")
+    #print(head+"\\"+tail.rsplit('.',1)[0]+"_encrypted.pdf")
     os.remove(filepath)
     return 0
 
