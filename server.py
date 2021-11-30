@@ -19,6 +19,7 @@ def home_page():
 def page(page_name,PDFfile=None,operation=None):
     if request.method == "POST":
         if page_name == "encrypt":
+            clear_uploads()
             file=request.files['filename']
             filename = secure_filename(file.filename)
             filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
@@ -31,6 +32,7 @@ def page(page_name,PDFfile=None,operation=None):
                 return render_template("encrypted.html",txt="This file is already Encrypted.")
 
         if page_name == "decrypt":
+            clear_uploads()
             file=request.files['filename']
             filename = secure_filename(file.filename)
             filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
@@ -44,6 +46,7 @@ def page(page_name,PDFfile=None,operation=None):
             return render_template("downloaded.html",PDFfile=filename.rsplit('.',1)[0]+"_decrypted.pdf",operation="The file is Decrypted Successfully.")
 
         if page_name == "change_pass":
+            clear_uploads()
             file = request.files['filename']
             filename = secure_filename(file.filename)
             filepath = os.path.join(app.config["UPLOAD_FOLDER"],filename)
@@ -67,6 +70,7 @@ def page(page_name,PDFfile=None,operation=None):
                 return render_template("encrypted.html",txt="This file is already Encrypted.")
 
         if page_name == "merger":
+            clear_uploads()
             files = request.files.getlist("filenames")
             filepaths = list()
             flag = 1
