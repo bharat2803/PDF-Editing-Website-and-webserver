@@ -2,7 +2,7 @@ import PyPDF2
 import os
 
 def encryptPDF(filepath,password):
-    head,tail=os.path.split(filepath)
+    head,tail=os.path.split(filepath) #tail contains the file name
     with open(filepath, mode='rb') as file:
         file_to_encrypt=PyPDF2.PdfFileReader(file)
         if file_to_encrypt.isEncrypted:
