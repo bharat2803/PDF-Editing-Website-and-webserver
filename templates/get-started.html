@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base-layout.html" %}
+
+{% block body %}
+<section id="featured-services" class="featured-services section">
+
+    <div class="container">
+      <div class="row gy-2">
+        <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-file-earmark-lock2-fill icon"></i></div>
+            <h4><a href="encryption" class="stretched-link">Encrypt Your PDF</a></h4>
+            <p>Secure your documents by encrypting your PDF files with a password for added protection.</p>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-unlock-fill icon"></i></div>
+            <h4><a href="decryption" class="stretched-link">Decrypt Your PDF</a></h4>
+            <p>Unlock and decrypt your PDF files with the correct password to access your content.</p>
+          </div>
+        </div>
+        </div>
+        <p></p>
+        <div class="row gy-2">
+        <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-gear-fill icon"></i></div>
+            <h4><a href="password-change" class="stretched-link">Change Your PDF Password</a></h4>
+            <p>Easily change the password of your PDF to enhance security and control access.</p>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="400">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-files-alt icon"></i></div>
+            <h4><a href="merge" class="stretched-link">Merge Your PDFs</a></h4>
+            <p>Combine multiple PDF files into one seamless document with our merge tool.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+</section>
+  {% endblock %}

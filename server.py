@@ -13,12 +13,17 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/')
 def home_page():
     clear_uploads()
-    return render_template('test.html')
+    return render_template('index.html')
+
+@app.route('/get-started')
+def getStarted():
+    clear_uploads()
+    return render_template('get-started.html')
 
 @app.route('/<string:page_name>',methods=["GET","POST"])
 def page(page_name,PDFfile=None,operation=None):
     if request.method == "POST":
-        if page_name == "encrypt":
+        if page_name == "encryption":
             clear_uploads()
             file=request.files['filename']
             filename = secure_filename(file.filename)
@@ -31,7 +36,7 @@ def page(page_name,PDFfile=None,operation=None):
             elif status == 1:
                 return render_template("encrypted.html",txt="This file is already Encrypted.")
 
-        if page_name == "decrypt":
+        if page_name == "decryption":
             clear_uploads()
             file=request.files['filename']
             filename = secure_filename(file.filename)
@@ -45,7 +50,7 @@ def page(page_name,PDFfile=None,operation=None):
                 return render_template("not_encrypted.html")
             return render_template("downloaded.html",PDFfile=filename.rsplit('.',1)[0]+"_decrypted.pdf",operation="The file is Decrypted Successfully.")
 
-        if page_name == "change_pass":
+        if page_name == "password-change":
             clear_uploads()
             file = request.files['filename']
             filename = secure_filename(file.filename)
@@ -62,14 +67,17 @@ def page(page_name,PDFfile=None,operation=None):
             new_filepath = os.path.join(app.config["UPLOAD_FOLDER"],tail.rsplit('.',1)[0]+"_decrypted.pdf")
             status=encryptPDF(new_filepath,new_password)
             head,tail=os.path.split(new_filepath)
-            os.rename(head+"\\"+tail.rsplit('.',1)[0]+"_encrypted.pdf",head+"\\"+filename.rsplit('.',1)[0]+"_updated.pdf")
+            encryptedFilename= tail.rsplit('.',1)[0]+"_encrypted.pdf"
+            encryptedFilePath = os.path.join(head,encryptedFilename)
             new_filename=filename.rsplit('.',1)[0]+"_updated.pdf"
+            new_filepath = os.path.join(head,new_filename)
+            os.rename(encryptedFilePath,new_filepath)
             if status == 0:
                 return render_template("downloaded.html",PDFfile=new_filename,operation="The Password is Changed Successfully.")
             elif status == 1:
                 return render_template("encrypted.html",txt="This file is already Encrypted.")
 
-        if page_name == "merger":
+        if page_name == "merge":
             clear_uploads()
             files = request.files.getlist("filenames")
             filepaths = list()

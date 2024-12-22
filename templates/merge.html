@@ -1,0 +1,18 @@
+{% extends "service-layout.html" %}
+{% block heading %} PDFs {% endblock %} {% block description_heading %} Merge {% endblock %}
+{% block form %}
+    <form class="php-email-form" data-aos="fade-up" data-aos-delay="200" name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm('password-change')">
+    <div class="row gy-4">
+
+        <div class="col-md-12">
+        <label for="filename" class="pb-2">Select a file</label>
+        <input id="filename" type="file" name="filename" class="form-control" required multiple><br><br>
+        </div>
+
+        <div class="col-md-12">
+        <button type="submit">Merge</button>
+        </div>
+
+    </div>
+    </form>
+{% endblock %}
