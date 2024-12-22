@@ -1,6 +1,8 @@
 import os
 
 def clear_uploads():
+    if not os.path.exists("uploads"):
+        os.makedirs("uploads")
     for file in os.listdir("uploads"):
         file_path = os.path.join("uploads", file)
     
