@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Encrypter and Merger</title>
     <link rel="shortcut icon" href="{{url_for('static', filename='Treetog-I-Documents.ico')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
     body {
       background-image: url("../static/bgimage.jpg");
@@ -36,6 +37,9 @@
       color: black;
       font-weight: bold;
     }
+    a.navbar-brand {
+      color:whitesmoke;
+    }
     a:hover {
       color: darkgrey;
       font-weight: bold;
@@ -46,13 +50,22 @@
   </style>
   </head>
   <body>
-    <h1>PDF ENCRYPTER AND MERGER</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-gray-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PDF Manager</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+    <h1>Securely Manage Your PDFs – Encrypt, Decrypt, Merge</h1>
     <hr>
     <p>The PDF Encrypter and Merger allows you to encrypt, decryt and even merge of PDF files. <br>
     Moreover, you can even change the password of your already encrypted file.<br>It creates a copy of your PDF file keeping the original file unedited so that you can have the option
     <br>whether you want to keep the original file or not.</p>
     <img src="../static/logo.png" alt="PDF logo">
     <p>Please choose one of the options below:</p>
+  </div>
     <ul>
       <li><a href = "encrypt">Encrypt your PDF file</a></li>
       <p></p>

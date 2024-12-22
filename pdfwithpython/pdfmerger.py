@@ -6,11 +6,11 @@ import os
 def PDFmerger(filepaths):
 
     totalpdfs = len(filepaths)
-    merger = PyPDF2.PdfFileMerger()
+    merger = PyPDF2.PdfMerger()
     fname = filepaths[0].split('.')[0]
     for i in range(totalpdfs):
         with open(filepaths[i],mode="rb") as file:
-            if PyPDF2.PdfFileReader(file).isEncrypted:
+            if PyPDF2.PdfReader(file).is_encrypted:
                 return 1  #Checking if the file is encrypted or not.
             else:
                 merger.append(filepaths[i])

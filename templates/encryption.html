@@ -1,0 +1,28 @@
+{% extends "service-layout.html" %}
+{% block heading %} PDF {% endblock %} {% block description_heading %} Encryption {% endblock %}
+{% block form %}
+    <form class="php-email-form" data-aos="fade-up" data-aos-delay="200" name="Form" enctype='multipart/form-data' method="post" onsubmit="return validateForm('encrypt')">
+    <div class="row gy-4">
+
+        <div class="col-md-12">
+        <label for="filename" class="pb-2">Select a file</label>
+        <input id="filename" type="file" name="filename" class="form-control" required><br><br>
+        </div>
+
+        <div class="col-md-12">
+        <label for="password" class="pb-2">Enter the Password </label>
+        <input name="password" id="password" type="password" class="form-control" required><br><br>
+        </div>
+
+        <div class="col-md-12">
+        <label for="cpassword" class="pb-2">Confirm Password </label>
+        <input name="cpassword" id="cpassword" type="password" class="form-control" required><br><br>
+        </div>
+
+        <div class="col-md-12">
+        <button type="submit">Encrypt</button>
+        </div>
+
+    </div>
+    </form>
+{% endblock %}

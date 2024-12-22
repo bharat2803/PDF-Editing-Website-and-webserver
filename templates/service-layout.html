@@ -1,0 +1,24 @@
+{% extends "base-layout.html" %}
+
+{% block body %}
+  <section id="contact" class="contact section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <p><span>{% block heading %}{% endblock %}</span> <span class="description-title">{% block description_heading %}{% endblock %}</span></p>
+    </div><!-- End Section Title -->
+
+    <div class="container justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4" style="justify-content: center;">
+        <div class="col-lg-7">
+            {% block form %}{% endblock %}
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Contact Section -->
+  <script src="..\static\validation.js"></script>
+{% endblock %}
