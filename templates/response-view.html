@@ -1,0 +1,20 @@
+{% if operation == "encryption" %}
+   {% extends "encryption.html" %}
+{% elif operation == "decryption" %}
+    {% extends "decryption.html" %}
+{% elif operation == "merge" %}
+    {% extends "merge.html" %}
+{% elif operation == "password-change" %}
+    {% extends "password-change.html" %}
+{% endif %}
+{% block form %}
+<div class="php-email-form">
+    <h4>{{txt}}</h4>
+    <p>{{subtext}}</p>
+    {% if status == "success" %}
+    <a href="/download/{{file_to_download}}"><button type="submit">Download </button></a>
+    <p></p>
+    {% endif %}
+    <a href={{operation}}> <button type="submit">Back</button></a>
+</div>
+{% endblock %}
