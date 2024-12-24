@@ -1,0 +1,75 @@
+{
+  "encryption": {
+    "success": {
+      "status": "success",
+      "operation": "encryption",
+      "txt": "The file is Encrypted Successfully.",
+      "subtext": "Click On The Button Below To Download Your File."
+    },
+    "failure_already_encrypted": {
+      "status": "failure",
+      "operation": "encryption",
+      "txt": "This file is already Encrypted.",
+      "subtext": "Please Try With Another File."
+    }
+  },
+  "decryption": {
+    "failure_incorrect_password": {
+      "status": "failure",
+      "operation": "decryption",
+      "txt": "Password Is Incorrect.",
+      "subtext": "Please Try Again."
+    },
+    "failure_not_encrypted": {
+      "status": "failure",
+      "operation": "decryption",
+      "txt": "This file is Not Encrypted.",
+      "subtext": "Please Try With Another File."
+    },
+    "success": {
+      "status": "success",
+      "operation": "decryption",
+      "txt": "The file is Decrypted Successfully.",
+      "subtext": "Click On The Button Below To Download Your File."
+    }
+  },
+  "password_change": {
+    "failure_incorrect_password": {
+      "status": "failure",
+      "operation": "password-change",
+      "txt": "Password Is Incorrect.",
+      "subtext": "Please Try Again."
+    },
+    "failure_not_encrypted": {
+      "status": "failure",
+      "operation": "password-change",
+      "txt": "This file is Not Encrypted.",
+      "subtext": "Please Try With Another File."
+    },
+    "success": {
+      "status": "success",
+      "operation": "password-change",
+      "txt": "The Password is Changed Successfully.",
+      "subtext": "Click On The Button Below To Download Your File."
+    },
+    "failure_already_encrypted": {
+      "status": "failure",
+      "txt": "This file is Encrypted.",
+      "subtext": "Please Try With Another File Or Decrypt It First."
+    }
+  },
+  "merge": {
+    "failure_already_encrypted": {
+      "status": "failure",
+      "operation": "merge",
+      "txt": "One or more Files are Encrypted.",
+      "subtext": "Kindly decrypt them first."
+    },
+    "success": {
+      "status": "success",
+      "operation": "merge",
+      "txt": "The Files are Merged Successfully.",
+      "subtext": "Click On The Button Below To Download Your File."
+    }
+  }
+}
